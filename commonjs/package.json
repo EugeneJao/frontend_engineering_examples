@@ -1,0 +1,21 @@
+{
+  "name": "commonjs",
+  "version": "1.0.0",
+  "description": "commonjs编程浏览器可运行代码示例，转换使用browserify",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify -t stringify -t node-lessify src/main.js -o dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "eugeneJao",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "node-lessify": "^0.1.5",
+    "stringify": "^5.2.0"
+  },
+  "dependencies": {
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.6"
+  }
+}
