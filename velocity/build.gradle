@@ -1,0 +1,15 @@
+plugins {
+    id 'war'
+    id 'org.gretty' version '2.2.0' 
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    compile 'velocity:velocity:1.5'
+    compile 'velocity-tools:velocity-tools-view:2.0-beta1'
+    testCompile 'junit:junit:4.12'
+}
