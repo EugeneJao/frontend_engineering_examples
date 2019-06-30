@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="./lib/seajs/seajs_3.0.3.js"></script>
+    <script src="./lib/seajs/text_1.1.1.js"></script>
+    
+    <!-- 不能与seajs-css共存 -->
+    <script src="./lib/seajs/less_1.0.5.js"></script>
+    <!-- <script src="./lib/seajs/css_1.0.5.js"></script> -->
+    <script>
+      less = {
+        env: 'development'
+      };
+    </script>
+    <script src="./lib/lessc.js"></script>
+    <script>
+      less.watch();
+      seajs.config({
+        base: '/lib',
+        alias: {
+          vue: 'vuejs/vue_export',
+          'vue-router': 'vuejs/vue-router_export',
+        },
+        paths: {
+          app: '/src',
+        },
+      });
+      seajs.use('./main.js');
+    </script>
+  </body>
+</html>
