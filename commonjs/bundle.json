@@ -1,5 +1,4 @@
 {
   "app.js": ["./src/main.js"],
-  "vue.common.js": ["./node_modules/vue/dist/vue.common.js", "./node_modules/vue-router/dist/vue-router.common.js"],
-  "pages/home.js": ["./src/pages/home/index.js"]
+  "pages/home.js": [ { "require": "./src/pages/home/index.js", "expose": "page_home" }]
 }

@@ -1,0 +1,10 @@
+{
+  "extends": "eslint-config-node-style-guide",
+  "rules": {
+    "space-after-keywords": "off",
+    "keyword-spacing": ["error", {
+      "before": true,
+      "after": true
+    }]
+  }
+}

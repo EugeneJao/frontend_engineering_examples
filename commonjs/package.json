@@ -4,7 +4,7 @@
   "description": "commonjs编程浏览器可运行代码示例，转换使用browserify",
   "main": "index.js",
   "scripts": {
-    "build": "browserify -t stringify -t node-lessify src/main.js -o dist/app.js",
+    "build": "browserify -t stringify -t node-lessify -p [ partition-bundle --map bundle.json --output dist/ --url dist/ --main ./src/main.js]",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "eugeneJao",
@@ -12,7 +12,9 @@
   "devDependencies": {
     "browserify": "^16.2.3",
     "node-lessify": "^0.1.5",
-    "stringify": "^5.2.0"
+    "partition-bundle": "^2.5.0",
+    "stringify": "^5.2.0",
+    "wzrd": "^1.5.0"
   },
   "dependencies": {
     "vue": "^2.6.10",

@@ -1,5 +1,6 @@
-var VueRouter = require('vue-router/dist/vue-router.common');
-var Home = function (resolve, reject) {
+var VueRouter = require ('vue-router/dist/vue-router.common');
+
+var Home = function (resolve) {
   loadjs(['page_home'], function (Home) {
     console.log(Home);
     resolve(Home);
