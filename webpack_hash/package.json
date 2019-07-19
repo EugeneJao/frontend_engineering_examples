@@ -1,0 +1,42 @@
+{
+  "name": "webpack_demo",
+  "version": "1.0.0",
+  "description": "webpack 示例",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack  --config ./build/webpack.config.js",
+    "build:hash": "npm run build --hash=hash",
+    "build:chunkhash": "npm run build --hash=chunkhash",
+    "build:contenthash": "npm run build --hash=contenthash",
+    "build:ext": "npm run build:allhash --extcss=true",
+    "build:allhash": "npm run build:hash && npm run build:chunkhash && npm run build:contenthash",
+    "build:allhashcommon": "npm run build:allhash --extruntime=true",
+    "build:extcommon": "npm run build:ext --extruntime=true",
+    "build:allcommon": "npm run build:allhashcommon && npm run build:extcommon ",
+    "build:all": "npm run build:allhash && npm run build:ext && npm run build:allcommon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "eugene_jao",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.0.0",
+    "csv-loader": "^3.0.2",
+    "file-loader": "^4.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "papaparse": "^5.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.6",
+    "webpack-manifest-plugin": "^2.0.4",
+    "xml-loader": "^1.2.1"
+  },
+  "dependencies": {
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.7"
+  }
+}

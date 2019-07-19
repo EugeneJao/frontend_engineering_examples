@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list>
+  <person>
+    <code>1</code>
+    <name>悟空</name>
+  </person>
+  <person>
+    <code>2</code>
+    <name>八届</name>
+  </person>
+  <person>
+    <code>3</code>
+    <name>三藏</name>
+  </person>
+  <person>
+    <code>4</code>
+    <name>悟净</name>
+  </person>
+</list>
