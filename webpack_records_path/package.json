@@ -1,0 +1,38 @@
+{
+  "name": "webpack_demo",
+  "version": "1.0.0",
+  "description": "webpack 示例",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "webpack --mode=development --config ./build/webpack.config.js",
+    "build": "webpack --mode=development --config ./build/webpack.config.js",
+    "build:moduleid:hash": "npm run build --module_id_mode=hash",
+    "build:moduleid:name": "npm run build --module_id_mode=name",
+    "build:chunkid:increasing": "npm run build && npm run build:moduleid:hash && npm run build:moduleid:name",
+    "build:chunkid:name": "npm run build:chunkid:increasing --chunk_id_mode=name",
+    "build:all": "npm run build:chunkid:increasing && npm run build:chunkid:name",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "eugene_jao",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.0.0",
+    "csv-loader": "^3.0.2",
+    "file-loader": "^4.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "papaparse": "^5.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.6",
+    "webpack-manifest-plugin": "^2.0.4",
+    "xml-loader": "^1.2.1"
+  },
+  "dependencies": {
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.7"
+  }
+}

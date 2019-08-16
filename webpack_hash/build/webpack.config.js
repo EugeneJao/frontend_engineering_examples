@@ -6,18 +6,19 @@ const hashMode = process.env.npm_config_hash || 'hash';
 const extractCss = process.env.npm_config_extcss;
 const extractRuntime = process.env.npm_config_extruntime
 
+
 console.log('hash mode:', hashMode);
 if (extractCss) console.log('extract css:', extractCss);
 if (extractRuntime) console.log(' extract runtime chunk:', extractRuntime);
 
-
+const outputPath = path.resolve(__dirname, `../${hashMode}_${extractCss ? 'extcss_' : ''}${extractRuntime ? 'extruntime_' : ''}dist`);
 const webpackConfig = {
   entry: {
     main: path.resolve(__dirname, '../src/main.js'),
   },
   output: {
     filename: `[name].[${hashMode}].js`,
-    path: path.resolve(__dirname, `../${hashMode}_${extractCss ? 'extcss_' : ''}${extractRuntime ? 'extruntime_' : ''}dist`),
+    path: outputPath,
     publicPath: '',
   },
 
@@ -119,6 +120,7 @@ const webpackConfig = {
     },
   },
   plugins: [
+
     new HtmlWebpackPlugin({
       title: 'webpack demo',
       template: path.resolve(__dirname, '../index.html'),
