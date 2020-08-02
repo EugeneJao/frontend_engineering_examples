@@ -17,6 +17,12 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        use: [
+          'babel-loader',
+        ],
+      },
+      {
         test: /\.css$/,
         use: [
           // 将js的css资源依赖插通过style标签插入到dom中。
@@ -95,5 +101,13 @@ module.exports = {
   // 不对外暴露的sourcemap
   // devtool: 'hidden-source-map',
   // 对外暴露的，和运行代码分开的sourcemap
-  devtool: 'source-map',
+  // devtool: 'inline-source-map', // babel async await 打断点会有问题, 配置retainLines依然无法解决
+  devtool: 'source-map', // babel async await 打断点会有问题, 配置retainLines依然无法解决
+    // devtool: 'module-source-map', // babel async await 打断点会有问题, 配置retainLines依然无法解决
+  // devtool: 'eval', // 调试无法还原真正的源文件内容
+  // devtool: 'eval-source-map', // babel async await 打断点会有问题, 配置retainLines依然无法解决
+  // devtool: 'cheap-source-map', // 调试无法还原真正的源文件内容， 因为不包含第三方库
+  // devtool: 'cheap-module-source-map', // babel async await 打断点会有问题, 需要配置retainLines
+  // devtool: 'cheap-eval-source-map', // 调试无法还原真正的源文件内容
+  // devtool: 'cheap-module-eval-source-map', // babel async await 打断点会有问题, 需要配置retainLines
 };

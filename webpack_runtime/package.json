@@ -1,0 +1,27 @@
+{
+  "name": "webpack_runtime",
+  "version": "1.0.0",
+  "description": "webpack runtime探究",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack",
+    "build:runtime": "webpack --config ./webpack.runtime.config.js",
+    "dev:runtime": "webpack-dev-server --config ./webpack.runtime.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "raoyijun181",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7"
+  }
+}
