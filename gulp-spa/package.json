@@ -10,7 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "csso": "^3.5.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-connect": "^5.7.0",
     "gulp-html-replace": "^1.6.2",
     "gulp-htmllint": "0.0.16",
